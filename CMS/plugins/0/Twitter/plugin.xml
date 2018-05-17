@@ -1,0 +1,7 @@
+<plugin>
+	<name>Twitter</name>
+	<description>Insert your Twitter status into a page.</description>
+	<help>../docs/plugins/Twitter.htm</help>
+	<admin>admin.php</admin>
+	<site>access.php</site>
+</plugin>

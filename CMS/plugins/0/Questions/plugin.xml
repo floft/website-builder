@@ -1,0 +1,7 @@
+<plugin>
+	<name>Questions</name>
+	<description>Allow users to ask you questions and allow you to respond to the user... etc.</description>
+	<help>../docs/plugins/Questions.htm</help>
+	<admin>admin.php</admin>
+	<site>access.php</site>
+</plugin>

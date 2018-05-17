@@ -1,0 +1,9 @@
+<theme>
+	<screenshot>screen_shot.gif</screenshot>
+	<icon>favicon.ico</icon>
+	<page>page.htm</page>
+	<specs>
+		<search>true</search>
+		<login>true</login>
+	</specs>
+</theme>

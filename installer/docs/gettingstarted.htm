@@ -1,0 +1,22 @@
+<html><head><title>Getting Started - Floft Website Builder</title></head><body>
+<h2>Getting Started</h2>
+<b>Downloading</b><br />
+The first thing you need to do to get the Floft Website Builder is download it. You can do this by going to <a href="http://www.floft.net/webbuilder" target="_blank">http://www.floft.net/webbuilder</a> and downloading the "Website Builder Installer"  which is the topmost link. Once you have downloaded this, open the zip file and copy its contents to the directory you would like.<br /><br />
+<b>Installing</b><br />
+Now, you need to go to your website and create a database to store your site. If you don't know how to do this, please read: <a href="http://www.siteground.com/tutorials/php-mysql/mysql_database_user.htm" target="_blank">http://www.siteground.com/tutorials/php-mysql/mysql_database_user.htm</a>. After this, you need to add the database information into the <i>variables.php</i> file, so navigate to the directory you copied the files into and open <i>variables.php</i>. Fill in the information as follows:<blockquote>
+	<i>$address</i> = the URL to your site, like "garrett.floft.net"<br />
+	<i>$sitename</i> = the name of your site (e.g. "Garrett")<br />
+	<i>$site_subtitle</i> = what shows up under the title on some designs (the default)<br />
+	<i>$host_addon</i> = the begining of the database name like if I have a database called "floft_garrett", this would be "floft"<br />
+	<i>$database</i> = the rest of the database name, like the "garrett" part of "floft_garrett"<br />
+	<i>$main_username</i> = the username for your database<br />
+	<i>$main_password</i> = the password for your database<br />
+	<i>$max_upload_size</i> = the max upload size (default is 500)<br />
+	<i>$site_id</i> = this should remain zero (the default), otherwise you could encounter some problems
+</blockquote>
+Then, open <a href="http://filezilla-project.org/download.php?type=client" target="_blank">FileZilla</a> and navigate to the directory you copied the files into (where the <i>variables.php</i> file is). Now upload them to your server. If you don't know how to do this, please read: <a href="http://wiki.filezilla-project.org/Using" target="_blank">http://wiki.filezilla-project.org/Using</a>.<br /><br />
+After you have uploaded all these files to the server, go to your website and you will see a beautiful website that has almost nothing on it. To change this and add the content you wish to see, go to your site address and type in <i>/admin</i>. For example, since my site is located on <i>http://garrett.floft.net/</i>, I would type in <i>http://garrett.floft.net/admin</i>. <b>Note:</b> you want to do this as soon as you get your files uploaded since whoever visits this address first can set up the administrative account.<br /><br />
+Once you have logged in you will see a message telling you to update. Follow the instructions and you will be able to edit your website. Thank you for downloading the Floft Website Builder!<br /><br />
+<b>Problems</b><br />
+<i>Getting data from database failed!</i> - This means that it can't connect to the database. Make sure your database is set up and the variables in the <i>variables.php</i> file are correct.<br /><br />
+<i>You didn't add the tables into the database. Please do so.</i> - This means that the tables weren't able to be inserted into the database. Import the <i>database.sql</i> (in this documentation directory) into the database. If you are using <a href="http://sourceforge.net/project/shownotes.php?release_id=646035" target="_blank">phpMyAdmin</a>, click on the database you are using for your site (e.g. "garrett"). Once there, click on the "Import" tab at the top. Then, navigate to this directory and click the "Go" button. This should fix this problem.<br /><br /><a href="javascript:history.back(-1);">Back</a></body></html>

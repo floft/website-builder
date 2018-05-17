@@ -1,0 +1,7 @@
+<plugin>
+	<name>Pictures</name>
+	<description>Edit an XML document that allows you to create a photo album.</description>
+	<help>../docs/plugins/PhotoAlbum.htm</help>
+	<admin>pictures.php</admin>
+	<site>access.php</site>
+</plugin>

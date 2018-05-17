@@ -1,0 +1,40 @@
+<html><head><title>Create a Plugin - Floft Website Builder</title></head><body>
+<h2>Create a Plugin</h2>
+The first step in creating a plugin is to create a directory. Next create a file called <i>plugin.xml</i> within that directory and insert the following into it (replacing italicized content with your own information):<blockquote>
+&lt;plugin&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;<i>name of plugin</i>&lt;/name&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;<i>description for plugin</i>&lt;/description&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;help&gt;<i>the url of the help file/website, if any</i>&lt;/help&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;admin&gt;admin.php&lt;/admin&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;site&gt;site.php&lt;/site&gt;<br />
+&lt;/plugin&gt;
+</blockquote>
+There are two elements that you might be wondering about (and are the most important): admin and site. You may have also noticed that they are both PHP files. The plugin is going to be coded in PHP. Before we talk about these two elements, create two files in the plugin directory (same directory as <i>plugin.xml</i>) named <i>admin.php</i> and <i>site.php</i>. In the <i>admin.php</i> file, add the code that will allow users to edit the settings for the plugin. For example, this would allow a user to edit a simple XML file:<blockquote>
+&lt;?php<br />
+if (isset($_POST['xml']))<br />
+{<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(setting_set("xml", $_POST['xml'])) echo "XML file has been updated.&lt;br /&gt;";<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else echo "An error occured while updating XML file.&lt;br /&gt;";<br />
+}<br />
+<br />
+$xml = setting_get("xml");<br />
+<br />
+echo '&lt;form method="post" action="&lt;url:current&gt;"&gt;&lt;input type="submit" value="Save"&gt;&lt;textarea name="xml" rows="15" style="width:100%"&gt;' . htmlspecialchars($xml) . '&lt;/textarea&gt;&lt;br /&gt;&lt;input type="submit" value="Save"&gt;&lt;/form&gt;';<br />
+?&gt;
+</blockquote>
+You may see two function that I used that are not normal PHP functions and that are not declared in this file. There are three, but one wasn't used in this file. Also note the usage of <i>&lt;url:current&gt;</i>.<blockquote>
+<i>setting_set($name, $value)</i> - sets a setting...adds it to the database<br />
+<i>setting_get($name)</i> - gets the setting that was added to the database<br />
+<i>setting_del($name)</i> - delete a setting from the database<br />
+<i>&lt;url:current&gt;</i> - is replaced with the url of the current page (useful for submitting forms as shown in this example)
+</blockquote>
+These three functions make it pretty easy to create plugins that don't have to worry about any other plugins or connecting to the database and all that other not-so-fun stuff. Now, I think you will be able to create the PHP code for your own plugin, but what about the other file, the <i>site.php</i> one? That will allow you to use this plugin on the website. Here is an example (displays the XML code on the page):<blockquote>
+&lt;?php<br />
+echo setting_get("xml");<br />
+?&gt;
+</blockquote>
+Now, you need to zip the whole folder to finish the process of creating the plugin. Make sure you zip the folder, not just the files inside of the folder. This is <u>very important</u>. Once you have done this, to make it look cool, rename the <i>.zip</i> file as a <i>.plugin</i> file. At this point in time, you have completed your plugin.
+<br /><br />
+"Okay, now that is all fine and dandy, but <u>how</u> do I add the code to the website?" you may ask. That is also quite simple. Go to the Plugins page and install the plugin. Click on the plugin and look for the &lt;plugin:name&gt; at the top of the page. All you have to do is add that to the HTML code of your website and it will insert the result of the <i>site.php</i> file.<br /><br />
+As you can see, it is really easy to create plugins to do almost whatever you want. It is easy to store data and retrieve it. Now you can go and make plugins. Happy coding!
+<br /><br /><a href="javascript:history.back(-1);">Back</a></body></html>

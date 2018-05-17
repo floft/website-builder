@@ -1,0 +1,7 @@
+<plugin>
+	<name>XML Updates</name>
+	<description>Allows you to keep an XML file of all recent updates.</description>
+	<help>../docs/plugins/XMLUpdates.htm</help>
+	<admin>updates.php</admin>
+	<site>access.php</site>
+</plugin>

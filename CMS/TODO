@@ -1,0 +1,46 @@
+TODO
+---------------------------------
+add sorting on edit page and multiple pages
+add multiple pages to the upload page
+view by file type, uploads (view only pictures or something)
+add customizable contact page
+make search more customizable
+edit the account editing page for users on site, make it look like floft's... switch between profile/account editing
+
+create help for editor (including for plugins)
+allow adding another user to the site by changing $site_id in variables.php
+add advanced mode that allows you to edit all settings
+add thumbnails to the uploads
+add error page that is used in .htaccess file (??? why ???)
+add more stuff to the dashboard
+add dropdown menu capability
+add search & login for Garrett theme
+
+make sure it works with multple sites
+create new databse install file
+zip files and add updater stuff
+setup for floft member sites
+create documentation
+create new themes for mom
+create more themes
+
+DONE
+--------------------------
+update TinyMCE editor
+create a separate Theme page instead of having it on the Edit Site Settings page
+allow themes to be installed (like plugins)
+make themes work with muliple sites (/themes/$site_id/$theme)
+create image for Garrett theme
+add $_GET and $_SERVER into the pages.... like <get:cow> and <server:HTTP_REFERER>
+add statistics, make viewable and add stuff like <stats:current> and <stats:site>
+added pretty url capabilities
+add sitemap plugin (with comment capabilities)
+redo the login/loginform settings on edit settings page, weird 2 options...
+allow admin to change login form
+get rid of $host_addon . $database like stuff....change to something like `users` instead
+allow users to install/delete plugins
+allow admin to backup database
+get rid of c59* stuff
+make option for uploaded files to be executable
+add "current page" stuff to menu...allow item to be selected if it is the current page
+cleaned up Uploads page some added Options instead of all the options on one page)

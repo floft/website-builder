@@ -1,0 +1,28 @@
+<html><head><title>Pictures - Plugins for Floft Website Builder</title></head><body>
+<h2>Pictures Plugin</h2>
+The pictures plugin allows you to simply create a Photo Gallery by allowing you to edit an XML document. By defaul there is some text in the window that sort of explains what it does. Here is the example:<br />
+<blockquote>&lt;pictures&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;album id="1" name="Test Photo Album" desc="Here is my great description..." thumb="images/thumbnails/does_not_exist.jpg"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture name="name of photo (in bold above it)" alt="alternate text" src="folder/does_not_exist.jpg" width="350px"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text below the image...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture name="name of second photo (in bold above it)" alt="alternate text number 2" src="random/image2.jpg" width="400px"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text below the second image...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/album&gt;<br />
+&lt;/pictures&gt;</blockquote>
+This photo album will display a single picture with some text above it (the name attribute) and some text below it (before the end tag). The picture will be 350px wide and will have "alternate text" as its alternate text. The example pretty much explains itself.<br /><br />
+To create multiple albums, just copy the album code and change the id number. For example, here are two identical photo albums:<br />
+<blockquote>&lt;pictures&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;album id="1" name="Test Photo Album" desc="Here is my great description..." thumb="images/thumbnails/does_not_exist.jpg"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture name="name of photo (in bold above it)" alt="alternate text" src="folder/does_not_exist.jpg" width="350px"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text below the image...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/album&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;album id="2" name="Test Photo Album" desc="Here is my great description..." thumb="images/thumbnails/does_not_exist.jpg"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture name="name of photo (in bold above it)" alt="alternate text" src="folder/does_not_exist.jpg" width="350px"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text below the image...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/album&gt;<br />
+&lt;/pictures&gt;</blockquote>
+<a href="javascript:history.back(-1);">Back</a></body></html>

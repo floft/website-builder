@@ -1,0 +1,7 @@
+<plugin>
+	<name>sitemap.txt</name>
+	<description>Create a sitemap.txt file for search engines.</description>
+	<help>../docs/plugins/Sitemap.htm</help>
+	<admin>sitemap.php</admin>
+	<site>access.php</site>
+</plugin>

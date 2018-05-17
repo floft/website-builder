@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Floft Webpage Designer Help</title>
+<style type="text/css">
+	a {color:blue;text-decoration:none;}
+	a:hover {color:red;text-decoration:underline;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    //<![CDATA[
+       <!--
+       var id = urlsomething( 'id' );
+       function urlsomething( name )
+       {
+		  var regexS = "[\\?&]"+name+"=([^&#]*)";
+		  var regex = new RegExp( regexS );
+		  var tmpURL = window.location.href;
+		  var results = regex.exec( tmpURL );
+		  if( results == null )
+			return "";
+		  else
+			return results[1];
+		}
+	   
+	   function printHeader(text, page)
+	   {
+			if (page == 'home')
+			{
+				document.write('<div align="center"><font size="6"><b>'+text+'</b></font><br /></div>');
+			}
+			else
+			{
+				document.write('<div align="center"><font size="6"><b>'+text+'</b></font><br /><a href="index.htm">Back</a></div>');
+			}
+	   }
+	   
+	   if (id == 'requirements')
+	   {
+			printHeader('Requirements', id);
+			document.write('<ul>'
+			+'<li>You need to have MySql. If you don\'t have it, you can download it from the <a href="http://dev.mysql.com/downloads/" target="_blank">MySQL</a> download page. You can download the free MySQL Community Server or you can buy the MySQL Enterprise.</li>'
+			+'<li>You need phpMyAdmin. If you don\'t have it, you can dowload it from the <a href="http://www.phpmyadmin.net/home_page/downloads.php" target="_blank">phpMyAdmin</a> download page for free (actually, you are downloading it from "<a href="http://www.sourceforge.net/projects/phpmyadmin/" target="_blank">SourceForge.net</a>", but the link to it is on the <a href="http://www.phpmyadmin.net/home_page/downloads.php" target="_blank">phpMyAdmin</a> download page).</li>'
+			+'<li>You will also need PHP version 5.0 or greater. You can download PHP for free from the <a href="http://www.php.net/downloads.php" target="_blank">PHP</a> download page.</li>'
+			+'<li>You neet some way to upload files to your site. You can to this by using a FTP Client. If don\'t have one, you can download <a href="http://www.sourceforge.net/projects/filezilla/" target="_blank">FileZilla</a> from "<a href="http://www.sourceforge.net/projects/filezilla/" target="_blank">SourceForge.net</a>".</li>'
+			+'</ul>');
+	   }
+	   else if (id == 'install')
+	   {
+			printHeader('Install', id);
+			document.write('First, if you haven\'t allready done so, extract all these files. Then, to start installing, go and create a database on your website (depending on your host and the software on your website, you can do it different ways). You can name the database whatever you want, but remember the name because you will need to use it later. Also create a user with all privileges and add the user to database you created.'
+			+' Next, in the docs folder (the same folder that this file is in) there is a "database.sql" file. Open that with notepad, and keep it open while we go to the next step. '
+			+'Go into your phpMyAdmin and go to the database you created. There are two ways to create the tables for the database: <ol>'
+			+'<li>When you are there, go to the "Import" page. Then click "Browse" and find the "database.sql" file in the "floft_designer" and then in the "docs" folder. Then hit go. The tables will then be in the database.</li>'
+			+'<li>When you are there, go to the "SQL" page. Then copy the contents of the "database.sql" file into the text area and hit go. The tables will then be in the database.</li></ol>'
+			+'Now that the database is installed open the "variables.php" file in the "floft_designer" folder. In the file there are several variables. The following list shows you what to change the variables to.<ol>'
+			+'<li>For the <u>address</u> variable, put the address to your site. (Like if my site was at "http://www.floft.net/", I would put the address as "www.floft.net".) Make sure you don\'t have the "http://" prefix or the last slash in the address.</li>'
+			+'<li>For the <u>site_name</u> variable, type in the name of your site.</li>'
+			+'<li>The <u>site_subtitle</u> variable is optional, for certian designs (like the default) it should be filled out. For other designs you can fill it out, but it might not show up anywhere. I would still fill it out. Whatever you decide to do, don\'t delete the variable. If you don\'t want a sub title, leave it blank. Don\'t delete it, it will cause many errors.</li>'
+			+'<li>The <u>host_addon</u> variable is the beginning of the database name. If I had a database called "floft_webdesigner", the host_addon name would be "floft_".</li>'
+			+'<li>For the <u>database</u> variable, type in the name of the database you create earlier.</li>'
+			+'<li>Then for the <u>main_username</u> variable, put the username for the database.</li>'
+			+'<li>Then for the <u>main_password</u> variable, put the password for the database.</li>'
+			+'<li>Then last of all, for the <u>max_upload_size</u> variable, type in the max upload size you want in KiloBytes (KB). I would recomend no more than 2000 KiloBytes (2 MegaBytes) because most of the time the script would time out if the upload was too large. </li>'
+			+'</ol>'
+			+'<br />There is one last thing to do for the installation. You need to upload all the files in the "floft_designer" folder to the place you want them on your site. If you are not going to use FileZilla, you can skip the following list.<ol>'
+			+'<li>First, open FileZilla</li>'
+			+'<li><b>If you have FileZilla already set up, just connect to your site and skip to the next step.</b> Near the top center of the window there are a couple boxes: Address, User, Password, and Port. For address, type in the address of your site, or, depending on who your host is, you might need to type in "ftp.floft.net" instead of "floft.net". For my site, I would need to type in "floft.net" or "www.floft.net". For User, type in your username. Then for password, type in your password for your site. (The username and password are <b>NOT</b> the username and password you typed into the "variables.php" file. They are the username and password that you have for your site.) Then you can hit "Quickconnect" and then you will be connected to your site.</li>'
+			+'<li>Then, when you are connected go into the folder called "public_html" or "www" on the right side of the window, in the section called "Remote Site". If there are no folders named that, your root directory is probably the "public_html" directory. Go into the directory you want the Floft Webpage Designer to be, or if you want a new directory, right mouse click and say "Create Directory", then type in the name you want. Then there will be a new folder.</li>'
+			+'<li>Next,  on the left side of the window in the "Local Site" frame, and find where the "floft_designer" folder is.</li>'
+			+'<li>Select all of the files. Then right mouse click and say "Upload". When you do, in the frame at the bottom of the window information about what you are uploading should apear. It should take about 5-20 minutes to upload, depending on your internet speed.</li>'
+			+'<li>Once the files are done uploading, disconnect from the server (you can do so by clicking on the button that has a picture of a computer with a red X on it.) and then exit FileZilla.</li>'
+			+'</ol>'
+			+'<br />Now that your files are up on your website, you can go to your website. There won\'t be that much of a site there, but you can still look at it. To edit your site, type in your site address in the address bar, then also type in "/admin". On my site I would type in "http://www.floft.net/folder/admin". '
+			+'On the Administration page, a form should come. Fill in the form with your information: your email, name, username, and password. This will be the email, name, username, and password for the administrator. <b>Make sure you do this as soon as your site is installed, because if somebody else went to the administration page, they could set up the administrator!</b> '
+			+'Then you are done installing, you can now use your site!');
+	   }
+	   else
+	   {
+			printHeader('Floft Webpage Designer Help', 'home');
+			document.write('<font size="5">Contents:</font><br />');
+			document.write('<a href="index.htm?id=requirements">Requirements</a><br />');
+			document.write('<a href="index.htm?id=install">Install</a><br />');
+	   }
+       // -->
+    //]]>
+    </script><noscript>
+		<div align="center">To use this script, your browser needs to support JavaScript.</div>
+	</noscript>
+</body>
+</html>

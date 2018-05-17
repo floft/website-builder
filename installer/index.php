@@ -1,0 +1,1 @@
+<html><head><title>Install</title></head><body><h2>Install</h2>You must install the Floft Website Builder before you can use it. Please go to the administration page and do so.</body></html>

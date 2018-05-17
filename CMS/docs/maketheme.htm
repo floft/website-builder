@@ -1,0 +1,42 @@
+<html><head><title>Create a Theme - Floft Website Builder</title></head><body>
+<h2>Create a Theme</h2>
+So, you want to test out my theme mechanism? The first step is creating a directory entitled what you want to name your theme (e.g. "Garrett"). Then, create an XML file within that directory called <i>theme.xml</i> (case sensitive). Copy this into the file:<blockquote>
+&lt;theme&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;screenshot&gt;screen_shot.gif&lt;/screenshot&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;icon&gt;favicon.ico&lt;/icon&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;page&gt;page.htm&lt;/page&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;specs&gt;<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;search&gt;true&lt;/search&gt;<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;login&gt;true&lt;/login&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/specs&gt;<br />
+&lt;/theme&gt;
+</blockquote>
+The first element says where the screenshot for the theme is. If you don't want to create a screenshot, you can download the default one: <a href="http://garrett.floft.net/themes/0/default/screen_shot.gif" target="_blank">http://garrett.floft.net/themes/0/default/screen_shot.gif</a>. The second element tells where the icon is. Once again, if you don't want to create an icon, you can use my icon: <a href="http://garrett.floft.net/themes/0/Garrett/favicon.ico" target="_blank">http://garrett.floft.net/themes/0/Garrett/favicon.ico</a>. The third tells where the templet for the theme is (more on this below). The forth element tells whether the theme has a search form and login form built in.<br /><br />
+<b>The Templet</b><br />
+To design the templet for the theme, you will want to create a file called <i>page.htm</i>. The first step is creating the design. Copy the design code into this document when you have made it including the search form, login form, and login menu if you are planning on having them. Replace the needed code (URLs, title, meta, etc) with the following special elements:<blockquote>
+<i>&lt;site:name&gt;</i> - Inserts the name of the website<br />
+<i>&lt;site:subtitle&gt;</i> - Inserts the subtitle of the website<br />
+<i>&lt;site:address&gt;</i> - The address to the site (used for <i>http://&lt;site:address&gt;/</i>)<br />
+<i>&lt;site:home&gt;</i> - Inserts the URL to the homepage of your website<br />
+<i>&lt;site:title&gt;</i> - Inserts the title of the page<br />
+<i>&lt;site:meta&gt;</i> - Inserts the meta code<br />
+<i>&lt;site:content&gt;</i> - Inserts the content of the page<br />
+<i>&lt;site:footer&gt;</i> - Inserts the footer for the website<br />
+<i>&lt;stats:site&gt;</i> - Inserts the total number of people who have come to the website<br />
+<i>&lt;stats:current&gt;</i> - Inserts the total number of people who have come to the current page<br />
+<i>&lt;url:theme&gt;</i> - Inserts the URL to the theme directory (for the them images and stuff)
+</blockquote>
+Now that you have most of the design taken care of, you must insert code to tell where the menu is. To do this, insert &lt;site:menu&gt;&lt;/site:menu&gt; where you want the menu to be. Now, inbetween those tags, insert the code you want for each individual link. For example: &lt;a href="&lt;menu:url&gt;"&gt;&lt;menu:name&gt;&lt;/a&gt;. There are also a few special elements for the menu as you can see from that example:<blockquote>
+<i>&lt;menu:name&gt;</i> - The name of the page the link will go to<br />
+<i>&lt;menu:pageid&gt;</i> - The page id of the page the link will go to<br />
+<i>&lt;menu:url&gt;</i> - The URL of the page the link will go to<br />
+<i>&lt;menu:num&gt;</i> - A value specific to this link (link_ followed by the what link number this is)<br />
+</blockquote>
+There is one more part of the menu. What if you want to have some code displayed only if the link is for the current page (like change what class it is)? I have added a way to do this. You can add &lt;menu:current&gt;&lt;/menu:current&gt; around the code you want to be displayed only if the link will link to the current page.<br /><br />
+Now, for the login form. Insert &lt;login:form&gt;&lt;/login:form&gt; around the login form so that it will only be displayed when the user wants it to be (change this on the Themes admin page).<br /><br />
+Now, for the login menu. Insert &lt;login:menu&gt;&lt;/login:menu&gt; around the login menu so that it'll only be displayed when the user is signed in. Just like for the menu, you need to tell what to display for each Members Only page. This time add &lt;login:menuitems&gt;&lt;/login:menuitems&gt; around the code you want for every Members Only item. The same special elements apply as when you created the menu (see the above list).<br /><br />
+Now, for the search. Insert &lt;site:search&gt;&lt;/site:search&gt; around the search form. This way, it will only be displayed when you have set it to be displayed in the administration panel.<br /><br />
+<b>Create Install File</b><br />
+Now, what do you do with your theme? How do you install it? I'll answer your questions. All you need to do is zip the folder that you created for this theme. Make sure you don't just zip the files in the folder; you have to zip the whole folder. Now, if you want to make it look cool, you can rename the file as a <i>.theme</i> file instead of <i>.zip</i>. After you are 100% sure that once you open the zip file you see a folder instead of just files, you can go to the Themes page on your administration panel and install the plugin.<br /><br />
+Thank you for testing out my new mechanism for creating themes. Happy coding!
+<br /><br /><a href="javascript:history.back(-1);">Back</a></body></html>

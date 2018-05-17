@@ -1,0 +1,72 @@
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.shadow{
+border:1px solid silver;
+font:10pt arial;
+position:relative;
+display:inline;
+background:white;
+z-index:100;
+}
+
+.pic{
+border:1px solid silver;
+font:10pt arial;
+position:relative;
+display:inline;
+background:white;
+z-index:100;
+}
+
+.pic2{
+border:1px solid silver;
+font:10pt arial;
+position:relative;
+display:inline;
+background:white;
+z-index:100;
+}
+
+.piclink{
+border:1px solid silver;
+font:10pt arial;
+position:relative;
+display:inline;
+background:white;
+z-index:100;
+}
+
+.shadow_inner{
+overflow:hidden;
+position:absolute;
+top: -1000px;
+filter:alpha(Opacity=10); /*modify to change the shade solidity/opacity, same as below*/
+opacity:0.1; /*firefox 1.5 opacity*/
+z-index:10
+}
+
+/*Floft code*/
+body {margin-top:9px;background-color:#aced59;}
+a {color:#B22222;text-decoration:none;}
+a:hover {color:#006400;text-decoration:underline;}
+a.menulink {color:#FFC519;text-decoration:none;}
+a.menulink:hover {color:#9ACD32;text-decoration:underline;}
+hr {background-color:#87CEFA; color:#87CEFA;}
+
+table.center {background-color:#5AB529;border:2px solid #295210;width:710px;text-align:center;}
+td.pic 	{background-color:#5AB529;border-width:0px;}
+td.nav 	{background-color:#295210;color:#FFC519;width:700px}
+td.main {background-color:#fafa88;text-align:left;border-color:#295210;border-style:solid;border-width: 0px 2px 2px 2px;}
+td.text {background-color:#5AB529;}
+td.footer {background-color:#5AB529;text-align:left;}
+img.header {border:1px solid #FFC519;}
+
+a.yellow_green {color:#FFC519;text-decoration:none;}
+a.yellow_green:hover {color:#9ACD32;text-decoration:underline;}
+a.black_yellow {color:#000000;text-decoration:none;}
+a.black_yellow:hover {color:#FFC519;text-decoration:underline;}
+a.black_red {color:#000000;text-decoration:none;}
+a.black_red:hover {color:#B22222;text-decoration:underline;}
+a.red_green {color:#B22222;text-decoration:none;}
+a.red_green:hover {color:#006400;text-decoration:underline;}

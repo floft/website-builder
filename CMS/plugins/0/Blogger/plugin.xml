@@ -1,0 +1,7 @@
+<plugin>
+	<name>Blogger</name>
+	<description>Allows you to insert a blog into your pages.</description>
+	<help>../docs/plugins/Blogger.htm</help>
+	<admin>blog.php</admin>
+	<site>access.php</site>
+</plugin>

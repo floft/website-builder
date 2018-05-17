@@ -1,0 +1,85 @@
+body.c1 {margin: 0;background-color:#F5F5DC;color: #993300; font-family: veranda; font-size: 100%;}
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.shadow{
+border:1px solid silver;
+font:10pt arial;
+position:relative;
+display:inline;
+background:white;
+z-index:100;
+}
+
+.pic{
+border:1px solid silver;
+font:10pt arial;
+position:relative;
+display:inline;
+background:white;
+z-index:100;
+}
+
+.shadow_inner{
+overflow:hidden;
+position:absolute;
+top: -1000px;
+filter:alpha(Opacity=10); /*modify to change the shade solidity/opacity, same as below*/
+opacity:0.1; /*firefox 1.5 opacity*/
+z-index:10
+}
+
+#loading {width: 168px; height: 42px; font-size:28pt; color: #A0522D; background-color: #D2B48C; position: absolute; left: 45%; top: 50%; text-align: center; z-index:100;  border-color:#A0522D;border-style:solid;border-width: 1px 1px 1px 1px;}
+.header {background-color:#D2B48C;z-index:0;border-bottom:solid;border-color:#D2691E;height:100px;}
+.footer {color:#A0522D;font-size:12pt;background-color:#D2B48C;position:relative;left:0px;top:0;z-index:1;}
+.pagepic {background-color:#D2B48C;position:absolute;left:0px;top:10px;z-index:1;}
+.pagepic2 {background-color:#D2B48C;z-index:1;}
+.pic3 {background-color:#D2B48C;z-index:1;}
+.footer1 {text-indent:10px;color:#A0522D;background-color:#D2B48C;position:relative;left:0px;top:0;z-index:1;border-top:solid;border-color:#D2691E;text-align:right;}
+.mt {font-size:13pt; text-align:left; border-style:solid; border-color:#D2B48C; background-color:#FFEBCD;}
+a {color:blue;text-decoration:none;}
+a:hover {color:red;text-decoration:underline;}
+.pic123 {text-decoration:none;}
+.c599 {color: #993300; font-family: veranda; font-size: 100%;}
+.c598 {color: #993300; font-family: veranda; font-size: 110%;}
+.c597 {color: #993300; font-family: veranda; font-size: 120%;}
+.c596 {font-size: 150%;color: #993300; font-family: veranda;}
+.c595 {color: #993300; font-family: veranda; font-size: 150%; font-weight: bold}
+.c594 {font-size: 90%;color: #993300; font-family: veranda;}
+.c5991 {color: #993300; font-family: veranda;}
+.c555999 {color: #993300; font-family: veranda; font-size: 150%; font-weight: bold;background-color:#D2B48C;}
+.tablehome2 {margin:0;}
+.picnb {color: #993300; font-family: veranda; border-color:#A52A2A;border-style:solid;z-index:1;border-width:0px;}
+.slug ol {margin-left:0px;}
+.slug ol {margin: 0px;}
+.menudiv1 ul, li {margin: 0; padding: 0; list-style-type: none;}
+.menu321 {cursor: pointer; background: #FFEBCD; height: 20px; line-height: 20px; margin: 0px 0; text-align: left;}
+.menu321 {position: absolute; z-index: 1000; left: 8em; margin-top: -20px; width: 180px; background: #FFEBCD; border-style:solid; border-color:#D2B48C; background-color:#FFEBCD;}
+.menu321 li {text-align: left; font-size: 13pt; height: 18px; line-height: 18px;}
+.menu321 li a, #menu dt a {color: #000000; text-decoration: none; display: block; border-top: 0; text-decoration: none;}
+.menu321 li a:hover {text-decoration: none; color:#A0522D; border-top: 0px solid #FFDEAD; border-bottom: 0px solid #FFDEAD; background-color: #FFDEAD;}
+.login {text-align:left;background-color:#FFEBCD;}
+.litop {color:white; font-size:13pt; text-indent:0; text-align:center;background-color:#CD853F;}
+.ltop {color:white; font-size:13pt; text-indent:0; text-align:center;background-color:#CD853F;}
+.llink {color:black; font-size:13pt;text-align:center;text-decoration:none;}
+.llink:hover {color:#A0522D; font-size:13pt;text-align:left;text-decoration:none;}
+.backgroundone {background-color:#FFEBCD;text-align:center;}
+.search {text-align:left;}
+.searchtop {color:white; font-size:13pt; text-align:center;background-color:#CD853F;}
+.menubartd {width:163px;}
+.mmtop {color:white; font-size:13pt; text-align:center;background-color:#CD853F;}
+.homemmlink {color:black; font-size:13pt;text-decoration:none;}
+.homemmlink:hover {color:#A0522D; font-size:13pt;text-decoration:none;}
+.mainsection{background-color:#F5F5DC;}
+.menudiv1 {background-color: #FFEBCD; text-align:center;}
+.menudiv1 li a:hover {background-color: #FFDEAD;}
+.menudiv1 ul {margin-left: 0px;padding: 0;}
+.menudiv1 ul {margin: 0px;list-style-type: none;}
+.menudiv1 li a{height: 100%;display: block;border-top: 0;text-decoration: none;}
+.pagetitle {line-height: 1em; background-color: transparent; white-space: nowrap; font-family:"trebuchet ms"; display:block; color:#A0522D; font-size:40pt; text-indent:1%; text-align:left; font-weight: bold; position:relative; left:130px; top:0; z-index:1; width:150px;/*filter:Shadow(Color=#A05000, Direction=130);)*/}
+.pagetitle span {position:absolute; display:block; top:0px;font-family:"trebuchet ms"; font-size:40pt;}
+.pagetitle font {display:block; padding:2px; color:#000000; font-family:"trebuchet ms"; font-size:40pt;}
+.subtitle {line-height: 1em; background-color: transparent; white-space: nowrap; font-family:"comic sans ms"; display:block; color:#CC6600; font-size:15pt; text-indent:1%; text-align:left; position:relative; left:180px; top:0; z-index:1; width:250px;}
+.subtitle span {position:absolute; display:block; top:0px; font-family:"comic sans ms"; font-size:15pt;}
+.subtitle font {display:block; padding:1px; color:#000000; font-family:"comic sans ms"; font-size:15pt;}
